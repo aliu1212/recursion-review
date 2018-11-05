@@ -10,12 +10,11 @@ var getElementsByClassName = function(className) {
   //start with document.body and an empty array
   //iterate through the classlist, add node if it matches classname
   //iterate through the children, recurse.
-
   var results = [];
   
   var finder = function(myElement) {
-    for (var i = 0; i < myElement.classList.length; i++) {
-      if (myElement.className === className) {
+    for (var i = 0; i < myElement.classList.length; i++) {  
+      if (myElement.classList[i] === className) {
         results.push(myElement);
       }
     }
