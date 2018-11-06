@@ -12,13 +12,13 @@ var parseJSON = function(json) {
     if (remainder.charAt(0) === '{') {
       return addObject(remainder);
     } 
-  }
+  };
 
   var addArray = function(remainder) {
     var temp = [];
 
     return temp;
-  }
+  };
   
   var addObject = function(remainder) {
     var temp = {};
@@ -28,11 +28,11 @@ var parseJSON = function(json) {
     
     temp[key] = "";//value
     return temp;
-  }
+  };
 
   var addString = function(remainder) {
     return remainder.substring(0,remainder.indexOf('"'));
-  }  
+  };
 
   return checkFirst(json);
 
